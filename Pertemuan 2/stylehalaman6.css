@@ -1,0 +1,11 @@
+body{
+    background-color: lightblue;
+    background-image:url(guguk.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: darkblue;
+}

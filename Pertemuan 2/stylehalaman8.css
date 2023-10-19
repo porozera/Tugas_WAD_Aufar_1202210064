@@ -1,0 +1,26 @@
+body{background: white url() no-repeat top right }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: orangered;
+}
+
+h3{
+    font-style: italic;
+}
+
+li:first-child a{
+    color: magenta;
+}
+
+li:last-child a{
+    color: green;
+}
+
+li:nth-child(4n-1) a{
+    color: lime;
+    font-size: 200%;
+}
