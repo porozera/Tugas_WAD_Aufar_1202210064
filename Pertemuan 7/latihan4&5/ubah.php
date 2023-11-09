@@ -3,10 +3,10 @@ require 'functions.php';
 
 //ambil data di url
 
-$kode_barang = $_GET["kode_barang"];
+$kode_binatang= $_GET["kode_binatang"];
 
 // query data mahasiswa berdasarkan id
-$barang = query("SELECT * FROM barang WHERE kode_barang = '$kode_barang'")[0];
+$barang = query("SELECT * FROM binatang WHERE kode_hewan = '$kode_bintang'")[0];
 
 
 // cek apakah tombol submit sudah ditekan atau belum
@@ -40,33 +40,33 @@ if(isset($_POST["submit"])){
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Ubah Data barang</title>
+        <title>Ubah Data Binatang</title>
     </head>
 
     <body>
-        <h1>Ubah Data Barang</h1>
+        <h1>Ubah Data Binatang</h1>
 
         <form action="" method="post">
             <ul>
                 <li>
-                    <label for="kodebarang">Kode Barang</label>
-                    <input type="text" name = "kodebarang" id="kodebarang" required value="<?= $barang['kode_barang']?>">
+                    <label for="kodebarang">Kode binatang</label>
+                    <input type="text" name = "kodebinatang" id="kodebinatang" required value="<?= $binatang['kode_hewan']?>">
                 </li>
                 <li>
-                    <label for="namabarang">Nama Barang</label>
-                    <input type="text" name = "namabarang" id="namabarang" required value="<?= $barang['nama_barang']?>">
+                    <label for="namabinatang">Nama binatang</label>
+                    <input type="text" name = "namabinatang" id="namabinatang" required value="<?= $binatang['nama_hewan']?>">
                 </li>
                 <li>
-                    <label for="hargabarang">Harga Barang</label>
-                    <input type="text" name = "hargabarang" id="hargabarang" required value="<?= $barang['harga_barang']?>">
+                    <label for="negaraasal">Negara Asal</label>
+                    <input type="text" name = "negaraasal" id="negaraasal" required value="<?= $binatang['negara_asal']?>">
                 </li>
                 <li>
-                    <label for="stokbarang">Stok Barang</label>
-                    <input type="text" name = "stokbarang" id="stokbarang" required value="<?= $barang['stok_barang']?>">
+                    <label for="jumlahbinatang">Jumlah binatang</label>
+                    <input type="text" name = "jumlahbinatang" id="jumlahbinatang" required value="<?= $binatang['jumlah_hewan']?>">
                 </li>
                 <li>
-                    <label for="gambar">Gambar Barang</label>
-                    <input type="text" name = "gambar" id="gambar" value="<?= $barang['gambar' ]?>">
+                    <label for="gambar">Gambar binatang</label>
+                    <input type="text" name = "gambar" id="gambar" value="<?= $binatang['gambar' ]?>">
                 </li>
                 <li>
                     <button type="submit" name="submit">Ubah Data</button>

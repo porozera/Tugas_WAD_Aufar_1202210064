@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","toko_barang");
+$conn = mysqli_connect("localhost","root","","kebunbinatang");
 
 function query($query){
     global $conn;
@@ -16,25 +16,25 @@ function query($query){
 function tambah($data){
       global $conn;
 
-      $kode_barang = htmlspecialchars($data["kodebarang"]);
-      $nama_barang = htmlspecialchars($data["namabarang"]);
-      $harga_barang = htmlspecialchars($data["hargabarang"]);
-      $stok_barang = htmlspecialchars($data["stokbarang"]);
-      $gambar = htmlspecialchars($data["gambar"]);
+      $kodebinatang = htmlspecialchars($data["kodebinatang"]);
+      $namabinatang = htmlspecialchars($data["namabinatang"]);
+      $negaraasal = htmlspecialchars($data["negaraasal"]);
+      $jumlahbinatang = htmlspecialchars($data["jumlahbinatang"]);
+      $gambarbinatang = htmlspecialchars($data["gambarbinatang"]);
 
           //query insert data
-    $query = "INSERT INTO barang
+    $query = "INSERT INTO binatang
     VALUES
-    ('$kode_barang','$nama_barang','$harga_barang','$stok_barang','$gambar')
+    ('$kodebinatang','$namabinatang','$negaraasal','$jumlahbinatang','$gambarbinatang')
     ";
      mysqli_query($conn, $query);
 
      return mysqli_affected_rows($conn);
 }
 
-function hapus($kode_barang){
+function hapus($kode_binatang){
   global $conn;
-  mysqli_query($conn, "DELETE FROM barang WHERE kode_barang = '$kode_barang'");
+  mysqli_query($conn, "DELETE FROM binatang WHERE kode_hewan= '$kode_binatang'");
 
   return mysqli_affected_rows($conn);
 }

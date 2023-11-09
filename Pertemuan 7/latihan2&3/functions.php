@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","toko_barang");
+$conn = mysqli_connect("localhost","root","","kebunbinatang");
 
 function query($query){
     global $conn;
@@ -16,16 +16,16 @@ function query($query){
 function tambah($data){
       global $conn;
 
-      $kodebarang = htmlspecialchars($data["kodebarang"]);
-      $namabarang = htmlspecialchars($data["namabarang"]);
-      $hargabarang = htmlspecialchars($data["hargabarang"]);
-      $stokbarang = htmlspecialchars($data["stokbarang"]);
-      $gambarbarang = htmlspecialchars($data["gambarbarang"]);
+      $kodebinatang = htmlspecialchars($data["kodebinatang"]);
+      $namabinatang = htmlspecialchars($data["namabinatang"]);
+      $negaraasal = htmlspecialchars($data["negaraasal"]);
+      $jumlahbinatang = htmlspecialchars($data["jumlahbinatang"]);
+      $gambarbinatang = htmlspecialchars($data["gambarbinatang"]);
 
           //query insert data
-    $query = "INSERT INTO barang
+    $query = "INSERT INTO binatang
     VALUES
-    ('$kodebarang','$namabarang','$hargabarang','$stokbarang','$gambarbarang')
+    ('$kodebinatang','$namabinatang','$negaraasal','$jumlahbinatang','$gambarbinatang')
     ";
      mysqli_query($conn, $query);
 

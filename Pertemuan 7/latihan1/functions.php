@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","toko_barang");
+$conn = mysqli_connect("localhost","root","","kebunbinatang");
 
 function query($query){
     global $conn;

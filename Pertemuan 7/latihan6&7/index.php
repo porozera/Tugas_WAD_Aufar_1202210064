@@ -1,7 +1,7 @@
 <?php
     // Koneksi ke database
     require 'functions.php';
-    $brg = query("SELECT * FROM barang");
+    $brg = query("SELECT * FROM binatang");
 
 ?>
 
@@ -19,11 +19,11 @@
         }
         </style>
     </head>
-<!-- Latihan 1 Buat tabel barang yang terkoneksi dengan database -->
+<!-- Latihan 1 Buat tabel binatang yang terkoneksi dengan database -->
     <body>
-        <h1>Daftar Barang</h1>
+        <h1>Daftar binatang</h1>
 
-        <a href="tambah.php">Tambah data mahasiswa</a>
+        <a href="tambah.php">Tambah data Binatang</a>
         <br><br>
 
         
@@ -31,10 +31,10 @@
             <tr>
                 <th>No.</th>
                 <th>Gambar</th>
-                <th>Nama Barang</th>
-                <th>Kode Barang</th>
-                <th>Harga Barang</th>
-                <th>Stok Barang</th>
+                <th>Nama Binatang</th>
+                <th>Kode Binatang</th>
+                <th>Negara Asal</th>
+                <th>Jumlah Binatang</th>
                 <th>Aksi</th>
             </tr>
 
@@ -44,13 +44,13 @@
             <tr>
                 <td><?= $i; ?></td>
                 <td><img src="img/<?= $row["gambar"]?>" widht = "150" height = "150"></td>
-                <td><?= $row["nama_barang"]?></td>
-                <td><?= $row["kode_barang"]?></td>
-                <td><?= $row["harga_barang"]?></td>
-                <td><?= $row["stok_barang"]?></td>
+                <td><?= $row["nama_hewan"]?></td>
+                <td><?= $row["kode_hewan"]?></td>
+                <td><?= $row["negara_asal"]?></td>
+                <td><?= $row["jumlah_hewan"]?></td>
                 <td>
                     <a href="">Ubah</a> |
-                    <a href="hapus.php?kode_barang=<?= $row["kode_barang"]?>">Hapus</a>
+                    <a href="hapus.php?kode_binatang=<?= $row["kode_hewan"]?>">Hapus</a>
                 </td>
             </tr>
             <?php $i++?>

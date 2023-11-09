@@ -2,9 +2,9 @@
 
 require 'functions.php';
 
-$kode_barang = $_GET["kode_barang"];
+$kode_binatang = $_GET["kode_binatang"];
 
-if( hapus($kode_barang) > 0){
+if( hapus($kode_binatang) > 0){
     echo "
             <script>
             alert('data berhasil dihapus!');

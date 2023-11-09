@@ -33,33 +33,33 @@ if(isset($_POST["submit"])){
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Tambah barang</title>
+        <title>Tambah binatang</title>
     </head>
 
     <body>
-        <h1>Tambah Barang</h1>
+        <h1>Tambah binatang</h1>
 
         <form action="" method="post">
             <ul>
                 <li>
-                    <label for="kodebarang">Kode Barang</label>
-                    <input type="text" name = "kodebarang" id="kodebarang" required>
+                    <label for="kodebinatang">Kode binatang</label>
+                    <input type="text" name = "kodebinatang" id="kodebinatang" required>
                 </li>
                 <li>
-                    <label for="namabarang">Nama Barang</label>
-                    <input type="text" name = "namabarang" id="namabarang" required>
+                    <label for="namabinatang">Nama binatang</label>
+                    <input type="text" name = "namabinatang" id="namabinatang" required>
                 </li>
                 <li>
-                    <label for="hargabarang">Harga Barang</label>
-                    <input type="text" name = "hargabarang" id="hargabarang" required>
+                    <label for="negaraasal">Negara asal</label>
+                    <input type="text" name = "negaraasal" id="negaraasal" required>
                 </li>
                 <li>
-                    <label for="stokbarang">Stok Barang</label>
-                    <input type="text" name = "stokbarang" id="stokbarang" required>
+                    <label for="jumlahbinatang">jumlah binatang</label>
+                    <input type="text" name = "jumlahbinatang" id="jumlahbinatang" required>
                 </li>
                 <li>
-                    <label for="gambarbarang">Gambar Barang</label>
-                    <input type="text" name = "gambarbarang" id="gambarbarang">
+                    <label for="gambarbinatang">Gambar binatang</label>
+                    <input type="text" name = "gambarbinatang" id="gambarbinatang">
                 </li>
                 <li>
                     <button type="submit" name="submit">Tambah Data</button>
